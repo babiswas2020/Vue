@@ -64,6 +64,8 @@ new Vue({
 new Vue({
   el:'#kevents',
   data:{
+  	name:"Bapan",
+  	age:12
   },
   methods:{
 
@@ -72,6 +74,28 @@ new Vue({
   	},
   	logAge:function(){
   		console.log("You have entered Age")
+  	}
+ }
+})
+
+new Vue({
+  el:'#cprop',
+  data:{
+  	age:12,
+  	a:0,
+  	b:0
+  },
+  methods:{
+
+  	
+ },
+ computed:{
+
+  	addToA:function(){
+  		return this.a+this.age;
+  	},
+  	addToB:function(){
+  		return this.b+this.age;
   	}
  }
 })
