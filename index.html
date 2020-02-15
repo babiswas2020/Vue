@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue JS Tutorials</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+  	<div id="vue-app">
+  		<h1>{{greet('Night')}}</h1>
+  		<a v-bind:href="website">The Bapan</a>
+  		<h1>Name:{{name}}</h1>
+  		<p>Job:{{job}}</p>
+  		<input type="text" v-bind:value="name"/>
+  		<p v-html="websiteTag"></p>
+  	</div>
+  	<div id="vue-age">
+  		<h1>Events</h1>
+  		<button v-on:click="add(1)">Add a year</button>
+  		<button v-on:dblclick="add(10)">Add 10 year</button>
+  		<button v-on:click="sub(1)">Substract a year</button>
+  		<button v-on:dblclick="sub(10)">Substract 10 year</button>
+  		<p>My age is {{age}}</p>
+  	</div>
+  	<div id="canvas" v-on:mousemove="updateXY">
+  		{{x}},{{y}}
+  	</div>
+  	<div id="canvas" v-on:mousemove="updateXY">
+  		{{x}},{{y}}
+  	</div>
+  	<div id="emodifier">
+  		<a v-on:click="click" href="http://www.thenetninja.co.uk">The Net Ninja</a>
+  	</div>
+  	<div id="kevents">
+  		<h1>Keyboard Events</h1>
+  		<label>Name</label>
+  		<input type="text" v-on:keyup.enter="logName"/>
+  		<label>Age:</label>
+  		<input type="text" v-on:keyup.enter="logAge"/>
+  	</div>
+    <script src="app.js"></script>
+  </body>
+</html>
